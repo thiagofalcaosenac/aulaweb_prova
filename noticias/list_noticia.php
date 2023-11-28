@@ -1,19 +1,9 @@
 <?php
-// inicia a sessão em PHP
-@session_start();
-// verifica se o usuário está logado
-if (!isset($_SESSION['usuario'])) {
-    // se não estiver logado, redireciona para a página de login
-    header("Location: index.php");
-    // encerra o script
-    exit();
-}
-
 // define o título da página
 $titulo = "Painel de Controle - Listar Notícias";
-include_once __DIR__ . "/header_dash.php";
+include_once __DIR__ . "../header_dash.php";
 // inclui o arquivo de conexão com o banco de dados
-include_once __DIR__ . "/../config/connection.php";
+include_once __DIR__ . "../config/connection.php";
 ?>
 
 <div class="container p-3">
@@ -55,11 +45,11 @@ include_once __DIR__ . "/../config/connection.php";
                             <ul class="list-inline m-0">
                                 <!-- Editar -->
                                 <li class="list-inline-item">
-                                    <a href="edit_noticia.php?idNot=<?php echo $noticia['id']; ?>" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="bi bi-pencil"></i></a>
+                                    <a href="/edit_noticia.php?idNot=<?php echo $noticia['id']; ?>" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="bi bi-pencil"></i></a>
                                 </li>
                                 <!-- Excluir -->
                                 <li class="list-inline-item">
-                                    <a href="delete_noticia.php?idNot=<?php echo $noticia['id']; ?>" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="bi bi-trash"></i></a>
+                                    <a href="/delete_noticia.php?idNot=<?php echo $noticia['id']; ?>" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="bi bi-trash"></i></a>
                                 </li>
                             </ul>
                         </li>
@@ -81,4 +71,4 @@ include_once __DIR__ . "/../config/connection.php";
         </div>
     </div>
     <?php
-    include __DIR__ . "/footer_dash.php";
+    include __DIR__ . "../footer_dash.php";

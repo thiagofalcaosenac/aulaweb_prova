@@ -1,34 +1,25 @@
 <?php
-include __DIR__ . "/header.php";
-
+// define o título da página
+$titulo = "Painel de Controle";
+include_once __DIR__ . "/header_dash.php";
 ?>
-<main>
-    <div class="container">
 
-        <div id="carinicial" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="//picsum.photos/id/10/1400/300" alt="Montanhas e um lago">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="//picsum.photos/id/11/1400/300" alt="Montanhas e uma floresta">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="//picsum.photos/id/12/1400/300" alt="Uma praia">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carinicial" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carinicial" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Próximo</span>
-            </button>
+<div class="container p-3">
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Bem vindo</h4>
+        </div>
+        <div class="col-md-6">
+            O Dashboard é a página principal de um site que permite inserir notícia. Nesta página, o usuário pode
+            acessar as principais funcionalidades do site, como adicionar, editar, excluir e gerenciar as notícias
+            publicadas. O Dashboard também mostra as estatísticas de visualização, comentários, curtidas e
+            compartilhamentos das notícias. O Dashboard é uma página dinâmica e interativa que facilita o controle e a
+            administração do conteúdo do site.
         </div>
     </div>
-</main>
+</div>
 
 <?php
-include __DIR__ . "/footer.php";
+// inclui o footer do dashboard
+include_once __DIR__ . "/footer_dash.php";
 ?>

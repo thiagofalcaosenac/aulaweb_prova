@@ -1,7 +1,7 @@
 <?php
 
 // insere o arquivo de conexão com o banco de dados
-include_once __DIR__ . "/../config/connection.php";
+include_once __DIR__ . "../config/connection.php";
 
 // verifica se o id da notícia foi enviado
 if (isset($_GET['idNot'])) {

@@ -1,27 +1,24 @@
-<header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="#">Revisão PHP</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menusite"
-                aria-controls="menusite" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="menusite">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.php">Inicial</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre.php">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="noticias.php">Notícias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contato.php">Contato</a>
-                    </li>
-                </ul>
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#menulateral" aria-controls="menulateral"><i class="bi bi-list"></i>
+        </button>
+        <a class="navbar-brand">Painel de controle</a>
+    </div>
+</nav>
+
+
+<div class="offcanvas offcanvas-start shadow-lg" tabindex="-1" id="menulateral" data-bs-keyboard="false" data-bs-backdrop="false" aria-labelledby="menulateralLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="menulateralLabel">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div id="sidebar" class="border rounded">
+            <div class="nav flex-column py-3">
+                <h4>Notícias</h4>
+                <a href="./noticias/add_noticia.php" class="list-inline-item">Inserir Notícia</a>
+                <a href="./noticias/list_noticia.php" class="list-inline-item">Listar Notícias</a>
             </div>
         </div>
-    </nav>
-</header>
+    </div>
+</div>

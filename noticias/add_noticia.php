@@ -1,14 +1,10 @@
 <?php
-// inicia sessão do usuário
-@session_start();
-// verifica se o usuário está logado
-(!isset($_SESSION['usuario'])) ? (header("Location: index.php") && exit())  : "";
 
 // verifica se os campos foram preenchidos e se o formulário foi enviado
 if (isset($_POST['form_titulo']) && isset($_POST['form_texto'])) {
 
     // inclui o arquivo de conexão com o banco de dados
-    include_once __DIR__ . "/../config/connection.php";
+    include_once __DIR__ . "../config/connection.php";
 
     // recebe os valores do formulário em variáveis locais
     $titulo = $_POST['form_titulo'];
@@ -29,6 +25,7 @@ if (isset($_POST['form_titulo']) && isset($_POST['form_texto'])) {
     // verifica se a query foi executada com sucesso
     if ($pdo->rowCount() == 1) {
         $mensagem = "Notícia inserida com sucesso!";
+        header("Location: list_noticia.php");
     } else {
         $mensagem = "Erro ao inserir notícia!";
     }
@@ -36,7 +33,7 @@ if (isset($_POST['form_titulo']) && isset($_POST['form_texto'])) {
 
 // troca o título da página
 $titulo = "Adicionar Notícia";
-include_once __DIR__ . "/header_dash.php";
+include_once __DIR__ . "../header_dash.php";
 ?>
 <div class="container p-3">
     <div>
@@ -72,5 +69,5 @@ include_once __DIR__ . "/header_dash.php";
 </div>
 <?php
 // inclui o footer do painel de controle
-include_once __DIR__ . "/footer_dash.php";
+include_once __DIR__ . "../footer_dash.php";
 ?>

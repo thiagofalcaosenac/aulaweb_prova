@@ -1,13 +1,8 @@
 <?php
-@session_start();
-if (!isset($_SESSION['usuario'])) {
-    header("Location: index.php");
-    exit();
-}
 
 $titulo = "Editar Notícia";
-include_once __DIR__ . "/header_dash.php";
-include_once __DIR__ . "/../config/connection.php";
+include_once __DIR__ . "../header_dash.php";
+include_once __DIR__ . "../config/connection.php";
 
 // verifica se o id da notícia foi enviado
 if (isset($_GET['idNot'])) {
@@ -79,5 +74,5 @@ $resultado = $resultado->fetch(PDO::FETCH_ASSOC);
 </div>
 <?php
 // inclui o footer do painel de controle
-include_once __DIR__ . "/footer_dash.php";
+include_once __DIR__ . "../footer_dash.php";
 ?>
