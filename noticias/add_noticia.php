@@ -4,7 +4,7 @@
 if (isset($_POST['form_titulo']) && isset($_POST['form_texto'])) {
 
     // inclui o arquivo de conexão com o banco de dados
-    include_once __DIR__ . "../config/connection.php";
+    include("../config/connection.php");
 
     // recebe os valores do formulário em variáveis locais
     $titulo = $_POST['form_titulo'];
@@ -33,7 +33,7 @@ if (isset($_POST['form_titulo']) && isset($_POST['form_texto'])) {
 
 // troca o título da página
 $titulo = "Adicionar Notícia";
-include_once __DIR__ . "../header_dash.php";
+include("../header_dash.php");
 ?>
 <div class="container p-3">
     <div>
@@ -69,5 +69,5 @@ include_once __DIR__ . "../header_dash.php";
 </div>
 <?php
 // inclui o footer do painel de controle
-include_once __DIR__ . "../footer_dash.php";
+include("../footer_dash.php");
 ?>

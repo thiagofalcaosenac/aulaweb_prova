@@ -4,15 +4,15 @@
 include("../config/connection.php");
 
 // verifica se o id da notícia foi enviado
-if (isset($_GET['idNot'])) {
+if (isset($_GET['idProf'])) {
     // recebe o id da notícia
-    $idNot = $_GET['idNot'];
+    $idProf = $_GET['idProf'];
     // cria a query de exclusão
-    $sql = "DELETE FROM noticias WHERE id  = '$idNot'";
+    $sql = "DELETE FROM professores WHERE id  = '$idProf'";
     // executa a query
     $result = $pdo->query($sql);
     // verifica se a exclusão foi realizada com sucesso
     if ($result) {
-        header("Location: list_noticia.php");
+        header("Location: list_professor.php");
     }
 }

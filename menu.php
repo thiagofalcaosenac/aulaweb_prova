@@ -1,6 +1,6 @@
-<nav class="navbar navbar-dark bg-primary">
+<nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#menulateral" aria-controls="menulateral"><i class="bi bi-list"></i>
+        <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#menulateral" aria-controls="menulateral"><i class="bi bi-list"></i>
         </button>
         <a class="navbar-brand">Painel de controle</a>
     </div>
@@ -18,6 +18,11 @@
                 <h4>Notícias</h4>
                 <a href="./noticias/add_noticia.php" class="list-inline-item">Inserir Notícia</a>
                 <a href="./noticias/list_noticia.php" class="list-inline-item">Listar Notícias</a>
+            </div>
+            <div class="nav flex-column py-3">
+                <h4>Professores</h4>
+                <a href="./professores/add_professor.php" class="list-inline-item">Inserir Professor</a>
+                <a href="./professores/list_professor.php" class="list-inline-item">Listar Professor</a>
             </div>
         </div>
     </div>
