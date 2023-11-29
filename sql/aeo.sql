@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27/11/2023 às 01:34
+-- Tempo de geração: 29/11/2023 às 03:42
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.0.28
 
@@ -38,6 +38,14 @@ CREATE TABLE `alunos` (
   `estado` char(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Despejando dados para a tabela `alunos`
+--
+
+INSERT INTO `alunos` (`id`, `nome`, `documento`, `email`, `sexo`, `dataNascimento`, `cidade`, `estado`) VALUES
+(2, 'Fausto', '111111111111111111', 'fausto@aluno.com', 'M', '2003-01-01', 'Joinville', 'SC'),
+(3, 'Thiago Friedman', '4971231123', 'thiago@hotmail.com', 'M', '2023-11-10', 'Joinville', 'SC');
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +58,36 @@ CREATE TABLE `disciplinas` (
   `curso` varchar(50) NOT NULL,
   `cargaHoraria` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `disciplinas`
+--
+
+INSERT INTO `disciplinas` (`id`, `descricao`, `curso`, `cargaHoraria`) VALUES
+(1, 'Matematica', 'Engenharia', 156),
+(3, 'Tomate', 'Verdureira', 90);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `noticias`
+--
+
+CREATE TABLE `noticias` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(255) NOT NULL,
+  `data` date NOT NULL,
+  `conteudo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `noticias`
+--
+
+INSERT INTO `noticias` (`id`, `titulo`, `data`, `conteudo`) VALUES
+(1, 'Notícia 1', '2023-07-20', 'Esta é a primeira notícia.'),
+(2, 'Notícia 2', '2023-07-21', 'Esta é a segunda notícia.'),
+(3, 'Notícia 3', '2023-07-22', 'Esta é a terceira notícia.');
 
 -- --------------------------------------------------------
 
@@ -64,6 +102,15 @@ CREATE TABLE `professores` (
   `telefone` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `professores`
+--
+
+INSERT INTO `professores` (`id`, `matricula`, `nome`, `telefone`, `email`) VALUES
+(1, '12345', 'Thiago Falcão', '4798123721', 'thiago@hotmail.com'),
+(4, '54321', 'Fausto', '4798312233', 'fausto@hotmail.com'),
+(5, '843281234', 'Joao', '47981238213', 'joao@hotmail.com');
 
 --
 -- Índices para tabelas despejadas
@@ -95,19 +142,19 @@ ALTER TABLE `professores`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `disciplinas`
 --
 ALTER TABLE `disciplinas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `professores`
 --
 ALTER TABLE `professores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

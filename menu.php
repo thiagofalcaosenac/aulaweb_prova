@@ -24,6 +24,11 @@
                 <a href="./professores/add_professor.php" class="list-inline-item">Inserir Professor</a>
                 <a href="./professores/list_professor.php" class="list-inline-item">Listar Professor</a>
             </div>
+            <div class="nav flex-column py-3">
+                <h4>Alunos</h4>
+                <a href="./alunos/add_aluno.php" class="list-inline-item">Inserir Aluno</a>
+                <a href="./alunos/list_aluno.php" class="list-inline-item">Listar Aluno</a>
+            </div>
         </div>
     </div>
 </div>

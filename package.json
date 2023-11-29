@@ -1,26 +1,26 @@
 {
-  "name": "2023-ads4f-revisaophp",
+  "name": "aulaweb_prova",
   "version": "1.0.0",
-  "description": "Revisao das aulas de PHP e desenvolvimento web",
+  "description": "Prova final de Desenvolvimento Web",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./src/scss/main.scss:./assets/css/main.css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/faustort/2023-ADS4f-RevisaoPhp.git"
+    "url": "git+https://github.com/thiagofalcaosenac/aulaweb_prova.git"
   },
   "keywords": [
     "aula",
     "teste",
     "avaliacao"
   ],
-  "author": "Fausto Toloi",
+  "author": "Thiago Friedman",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/faustort/2023-ADS4f-RevisaoPhp/issues"
+    "url": "https://github.com/thiagofalcaosenac/aulaweb_prova/issues"
   },
-  "homepage": "https://github.com/faustort/2023-ADS4f-RevisaoPhp#readme",
+  "homepage": "https://github.com/thiagofalcaosenac/aulaweb_prova#readme",
   "dependencies": {
     "sass": "^1.69.5"
   }
