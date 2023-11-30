@@ -5,7 +5,7 @@ include("../header_dash.php");
 include("../config/connection.php");
 ?>
 
-<div class="container p-3">
+<div class="container p-3 bg-light text-dark">
     <div class="row">
         <div class="col-md-6">
             <h3>Listar Professores</h3>

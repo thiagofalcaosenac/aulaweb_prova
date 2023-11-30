@@ -41,7 +41,7 @@ $resultado = $pdo->query($sql);
 $resultado = $resultado->fetch(PDO::FETCH_ASSOC);
 
 ?>
-<div class="container p-3">
+<div class="container p-3 bg-light text-dark">
     <div>
         <div class="row">
             <div class="col-md-6">

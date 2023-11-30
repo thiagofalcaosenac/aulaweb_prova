@@ -45,7 +45,7 @@ if (isset($_POST['form_nome']) && isset($_POST['form_documento']) && isset($_POS
 $titulo = "Adicionar Aluno";
 include("../header_dash.php");
 ?>
-<div class="container p-3">
+<div class="container p-3 bg-light text-dark">
     <div>
         <div class="row">
             <div class="col-md-6">

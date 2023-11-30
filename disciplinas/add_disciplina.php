@@ -36,7 +36,7 @@ if (isset($_POST['form_descricao']) && isset($_POST['form_curso']) && isset($_PO
 $titulo = "Adicionar Disciplina";
 include("../header_dash.php");
 ?>
-<div class="container p-3">
+<div class="container p-3 bg-light text-dark">
     <div>
         <div class="row">
             <div class="col-md-6">

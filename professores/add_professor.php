@@ -38,7 +38,7 @@ if (isset($_POST['form_matricula']) && isset($_POST['form_nome']) && isset($_POS
 $titulo = "Adicionar Professor";
 include("../header_dash.php");
 ?>
-<div class="container p-3">
+<div class="container p-3 bg-light text-dark">
     <div>
         <div class="row">
             <div class="col-md-6">
